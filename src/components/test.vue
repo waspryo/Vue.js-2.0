@@ -1,8 +1,8 @@
 <template>
   <div class="test">
     <h1>{{title}}</h1>
-    <p>{{ user.firstName }}</p>
-    <p v-text="user.firstName"></p>
+    <p v-if="showName">{{ user.firstName }}</p>
+    <p v-else="showName">nobody</p>
   </div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
       user: {
           firstName: 'Mike',
           lastName: 'Doe'
-      }
+      },
+      showName: true
     }
   }
 };
