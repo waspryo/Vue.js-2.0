@@ -1,15 +1,24 @@
 <template>
   <div class="test">
-      <h1>test</h1>
+    <h1>{{title}}</h1>
+    <p>{{ user.firstName }}</p>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'test'
-}
+  name: "test",
+  data() {
+    return {
+      title: "hello world",
+      user: {
+          firstName: 'Mike',
+          lastName: 'Doe'
+      }
+    }
+  }
+};
 </script>
 
 <style scoped>
-
 </style>
