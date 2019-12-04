@@ -7,6 +7,7 @@
     <ul>
         <li v-for="item in items">{{ item.title }}</li>
     </ul>
+    <button v-on:click="greet('Hello Wolrd')">Say Greeting</button>
   </div>
 </template>
 
@@ -27,6 +28,11 @@ export default {
           {title: 'Item three'},
       ]
     }
+  },
+  methods: {
+      greet: function(greeting) {
+          alert(greeting)
+      }
   }
 };
 </script>
