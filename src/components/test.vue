@@ -8,10 +8,13 @@
         <li v-for="item in items">{{ item.title }}</li>
     </ul>
     <button v-on:click="greet('Hello Wolrd')">Say Greeting</button>
+    <br>
+    <input type="text" v-on:keyup="pressKey">
   </div>
 </template>
 
 <script>
+import func from '../../vue-temp/vue-editor-bridge'
 export default {
   name: "test",
   data() {
@@ -32,6 +35,12 @@ export default {
   methods: {
       greet: function(greeting) {
           alert(greeting)
+      },
+      pressKey: function(e) {
+          console.log(e.target.value)
+      },
+      enterHit: function() {
+          console.log('You hit enter')
       }
   }
 };
